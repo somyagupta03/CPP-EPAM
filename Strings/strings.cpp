@@ -23,7 +23,7 @@ int main() {
 
     // Find a substring
     size_t pos = str.find("World");
-    if (pos != std::string::npos) {
+    if (pos != string::npos) {
         cout << "'World' found at position: " << pos << endl;
     }
     
