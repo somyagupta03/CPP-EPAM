@@ -9,10 +9,14 @@ int main(){
     printf("%d",ptr+1);
     */
    int arr[]={1,2,3,4,5,67};
+   int *arrptr = arr;
    printf("%d\n",arr[0]);//normal way 
    //using pointers,finding the value at those positions
 
    printf("the value at address of second element of array is %d\n",*(arr+1));
    printf("The value at second position is %d\n",*(&arr[1]));
+   //arr++ this is not applicable 
+   arrptr++;
+   
    return 0;
 }
