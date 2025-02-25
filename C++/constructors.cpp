@@ -7,7 +7,7 @@ string name;
 int age;
 
 public:
-   //creating a constructor
+   //creating a parametrized constructor
     Person(string a,int b){
     name=a;
     age=b;
