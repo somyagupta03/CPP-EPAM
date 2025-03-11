@@ -14,12 +14,15 @@ public:
         cout<<"weight in kg is "<<kg<<endl;
      }
      //prefix overloading
-     void operator ++(){
-        ++kg;
+     Weight operator++(){
+        kg++;
+        return *this;
      }
      //postfix overloading
-     void operator ++(int){
+     Weight operator ++(int){
+        Weight temp = *this;
         kg++;
+        return temp;
      }
 };
 
