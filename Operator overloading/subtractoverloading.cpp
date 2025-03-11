@@ -7,7 +7,7 @@ public:
     Vector2D(float x, float y) : x(x), y(y) {}
 
     // Binary subtraction operator
-    Vector2D operator-(const Vector2D& other) const {
+    Vector2D operator-(Vector2D& other) const {
         return Vector2D(x - other.x, y - other.y);
     }
 
