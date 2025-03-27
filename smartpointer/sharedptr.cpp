@@ -103,6 +103,14 @@ public:
 		decrementcounter();
 	}
 };
+
+class myClass {
+public:
+	void aman() {
+		cout << "aman is crazy" << endl;
+	}
+};
+
 int main() {
 	Sharedptr<int> ptr1; // default constructor
 	Sharedptr<int>ptr2(new int(20)); // parametrised constructor
@@ -114,14 +122,18 @@ int main() {
 	Sharedptr<int>ptr4(std::move(ptr1)); // move copy constructor
 	ptr2 = std::move(ptr3);// move assignment operator
 
+	//ptr1->get_count();
 	//ptr1.reset();
 	ptr1.reset(new int(5));
 
 	cout << (*ptr1) << endl; // implementing * operator 
-	ptr1->func(); // implementing -> operator 
+//ptr1->func(); // implementing -> operator 
 
 	ptr1.get(); // raw pointer
 	ptr1.get_count(); // no. of objects pointing to the same resource
+
+	Sharedptr<myClass>sPtr(new myClass());
+	sPtr->aman();
 
 	return 0;
 }
