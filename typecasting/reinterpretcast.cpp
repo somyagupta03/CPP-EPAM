@@ -11,4 +11,8 @@ int main(){
 
     return 0;
 
+    // it gives different result because of the memory represenation of both float and integer.
+    // when casting takes place it reinterprets each bit of the float number and converts it into an integer 
+    //resulting in a big integer number.
+
 }
