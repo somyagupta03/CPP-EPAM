@@ -17,6 +17,7 @@ void addMoney(int money) {
 
 void withdrawMoney(int money) {
 	std::unique_lock<mutex> ul(m);
+	//if balance if zero the condition becomes false and the mutex will wait and lock goes to another thread.
 	cv.wait(ul, [] { return { balance != 0 } ? true : false;});
 	if (balance >= money) {
 		balance -= money;
